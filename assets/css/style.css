@@ -1,0 +1,237 @@
+@font-face {
+	font-family: ubuntu-bold;
+	src: url("../fonts/ubuntu/Ubuntu-B.ttf");
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+section {
+	max-width: 100%;
+}
+
+.container{
+	width: 85%;
+	padding: 0px;
+}
+
+#header {
+	background: #363537;
+	color: #00C5E2;
+	height: 100vh;
+	text-align: center;
+	display: flex;
+	align-items: center;
+}
+
+.header {
+	width: 100%;
+}
+
+@media (min-width: 600px) {
+	.header h1 {
+		margin-top: -100px;
+	}
+}
+
+.header h1 {
+	font-size: 70px;
+	font-family: ubuntu-bold;
+}
+
+.header h4{
+	color: #F5BD34;
+}
+
+.header h4 span span{
+	color: #00C5E2;
+}
+
+
+.para-sobre {
+	max-width: 75px;
+	min-height: 75px;
+	max-height: 75px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px #00C5E2 solid;
+	border-radius: 100%;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	margin-top: 80px;
+	font-size: 30px;
+}
+
+.para-sobre:hover {
+	cursor: pointer;
+}
+
+.para-sobre span{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.fixar{
+	z-index: 9999;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+
+nav {
+	padding: 17.5px 0;
+	min-height: 75px;
+	background-color: #3094B6;
+	display: flex;
+	align-items: center;
+}
+
+nav a {
+	color: #FFFFFF;
+}
+
+/*Brand*/
+
+.brand {
+	float: left;
+}
+
+.am {
+	display: none;
+	font-family: ubuntu-bold;
+}
+
+@media (max-width: 435px) {
+	.arlen {
+		display: none;
+	}
+
+	.am {
+		display: block;
+	}
+}
+
+/*Brand*/
+
+/*Menu Start*/
+
+.menu {
+	float: right;
+}
+
+.fonte-menu {
+	font-size: 23px;
+	font-family: ubuntu;
+	color: #FFFFFF;
+}
+
+#menu li{
+	display: inline;
+}
+
+.menu-colchete li{
+	list-style: none;
+}
+
+.menu-colchete li:hover {
+	text-decoration: none;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+.menu-colchete li::before,
+.menu-colchete li::after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+.menu-colchete li::before {
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+.menu-colchete li::after {
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+
+.menu-colchete li:hover::before,
+.menu-colchete li:hover::after,
+.menu-colchete li:focus::before,
+.menu-colchete li:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
+
+
+.icone-mobile {
+	color: #FFFFFF;
+	display: none;
+}
+
+@media (max-width: 845px){
+	
+	.menu {
+		width: 60%;
+	}
+
+	#menu {
+		display: none;
+	}
+
+	.icone-mobile {
+		display: block;
+		float: right;
+		font-size: 40px;
+		cursor: pointer;
+	}
+
+	.menu-responsivo {
+		float: right;
+		width: 100%;
+		display: block;
+		position: relative;
+	}
+
+	#menu > li{
+		display: list-item;
+		text-decoration: none;
+		list-style: none;
+	}
+
+}
+
+/*Menu End*/
+
+#sobre {
+	height: calc(100vh - 75px);
+	background: #F7FFFF;
+}
+
+#servicos {
+	height: calc(100vh - 75px);
+}
+
+#redes-sociais {
+	height: calc(100vh - 75px);
+}
+
+#contato {
+	height: calc(100vh - 75px);
+}
